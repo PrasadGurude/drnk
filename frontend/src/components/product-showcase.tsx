@@ -96,10 +96,10 @@ export default function ProductShowcase() {
                       </li>
                     ))}
                   </ul>
-                  <Button size="lg" className="w-fit bg-cyan-500 hover:bg-cyan-600 group">
+                  {/* <Button size="lg" className="w-fit bg-cyan-500 hover:bg-cyan-600 group">
                     Shop Now
                     <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                  </Button>
+                  </Button> */}
                 </div>
                 <div className="order-1 md:order-2 relative h-[300px] md:h-[500px] flex items-center justify-center">
                   <div className="absolute inset-0 flex items-center justify-center">

@@ -54,10 +54,7 @@ export default function MobileMenu() {
             Contact
           </Link>
           <div className="h-px bg-border my-6" />
-          <Button className="w-full bg-cyan-500 hover:bg-cyan-600">Shop Now</Button>
-          <Button variant="outline" className="w-full mt-4">
-            Find Stores
-          </Button>
+          <Button className="w-full bg-cyan-500 hover:bg-cyan-600">Why drnk</Button>
         </nav>
       </SheetContent>
     </Sheet>

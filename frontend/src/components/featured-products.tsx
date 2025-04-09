@@ -84,12 +84,12 @@ export default function FeaturedProducts() {
             <p className="text-muted-foreground mb-3">{product.description}</p>
             <p className="font-medium text-lg">{product.price}</p>
           </CardContent>
-          <CardFooter className="p-6 pt-0">
+          {/* <CardFooter className="p-6 pt-0">
             <Button className="w-full bg-cyan-500 hover:bg-cyan-600 group">
               <ShoppingCart className="mr-2 h-4 w-4 transition-transform group-hover:scale-110" />
               Add to Cart
             </Button>
-          </CardFooter>
+          </CardFooter> */}
         </Card>
       ))}
     </div>

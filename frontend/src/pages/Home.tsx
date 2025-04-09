@@ -34,10 +34,7 @@ const Home = () => {
           </Link>
         </nav>
         <div className="flex items-center gap-4 ">
-          <Button variant="ghost" size="sm" className="hidden md:flex">
-            Find Stores
-          </Button>
-          <Button className="hidden md:flex bg-cyan-500 hover:bg-cyan-600">Shop Now</Button>
+          <Button className="hidden md:flex bg-cyan-500 hover:bg-cyan-600">Why drnk</Button>
           <MobileMenu />
         </div>
       </div>
