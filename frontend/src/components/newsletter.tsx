@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { ArrowRight } from "lucide-react"
+import { useNavigate } from "react-router-dom"
 
 export default function Newsletter() {
+  const navigate = useNavigate()
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
       <div className="space-y-8">
@@ -48,7 +50,7 @@ export default function Newsletter() {
           <p className="text-muted-foreground mb-6">
             Locate DRNK products at a store near you using our store locator.
           </p>
-          <Button variant="outline" size="lg" className="w-full">
+          <Button variant="outline" size="lg" className="w-full " onClick={() => navigate("/store-locator")}>
             Find Stores
           </Button>
         </div>

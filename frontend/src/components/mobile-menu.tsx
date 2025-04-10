@@ -28,29 +28,53 @@ export default function MobileMenu() {
           <Link
             to= '#products'
             className="px-2 py-1 text-lg hover:text-cyan-500 transition-colors"
-            onClick={() => setOpen(false)}
-          >
+            onClick={(e) => {
+              setOpen(false)
+                e.preventDefault();
+                const contactSection = document.getElementById("products");
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: "smooth" });
+                }
+            }}>
             Products
           </Link>
           <Link
             to="#about"
             className="px-2 py-1 text-lg hover:text-teal-500 transition-colors"
-            onClick={() => setOpen(false)}
-          >
+            onClick={(e) => {
+              setOpen(false)
+                e.preventDefault();
+                const contactSection = document.getElementById("about");
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: "smooth" });
+                }
+            }}>
             About
           </Link>
           <Link
             to="#sustainability"
             className="px-2 py-1 text-lg hover:text-teal-500 transition-colors"
-            onClick={() => setOpen(false)}
-          >
+            onClick={(e) => {
+              setOpen(false)
+                e.preventDefault();
+                const contactSection = document.getElementById("sustainability");
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: "smooth" });
+                }
+            }}>
             Sustainability
           </Link>
           <Link
             to="#contact"
             className="px-2 py-1 text-lg hover:text-teal-500 transition-colors"
-            onClick={() => setOpen(false)}
-          >
+            onClick={(e) => {
+              setOpen(false)
+                e.preventDefault();
+                const contactSection = document.getElementById("contact");
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: "smooth" });
+                }
+            }}>
             Contact
           </Link>
           <div className="h-px bg-border my-6" />
