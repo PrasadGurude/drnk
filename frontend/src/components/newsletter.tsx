@@ -41,7 +41,7 @@ export default function Newsletter() {
         <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
           <h3 className="font-bold text-xl mb-3">Customer Service</h3>
           <p className="text-muted-foreground mb-6">Have questions or need assistance? Our team is here to help.</p>
-          <Button variant="outline" size="lg" className="w-full">
+          <Button onClick={()=> navigate('/customer-service')} variant="outline" size="lg" className="w-full">
             Contact Us
           </Button>
         </div>
@@ -50,7 +50,7 @@ export default function Newsletter() {
           <p className="text-muted-foreground mb-6">
             Locate DRNK products at a store near you using our store locator.
           </p>
-          <Button variant="outline" size="lg" className="w-full " onClick={() => navigate("/store-locator")}>
+          <Button variant="outline" size="lg" className="w-full " onClick={() => navigate("/stores")}>
             Find Stores
           </Button>
         </div>
@@ -59,14 +59,14 @@ export default function Newsletter() {
           <p className="text-muted-foreground mb-6">
             Interested in stocking DRNK products? Get in touch with our sales team.
           </p>
-          <Button variant="outline" size="lg" className="w-full">
+          <Button variant="outline" size="lg" className="w-full" onClick={() => navigate("/wholesale")}>
             Learn More
           </Button>
         </div>
         <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
           <h3 className="font-bold text-xl mb-3">Partnerships</h3>
           <p className="text-muted-foreground mb-6">Explore collaboration opportunities with our brand.</p>
-          <Button variant="outline" size="lg" className="w-full">
+          <Button variant="outline" size="lg" className="w-full" onClick={() => navigate("/partnership")}>
             Partner With Us
           </Button>
         </div>

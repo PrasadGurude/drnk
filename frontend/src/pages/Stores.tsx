@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input"
 import { Card, CardContent } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Badge } from "@/components/ui/badge"
-import { MapPin, Search, Navigation, Phone, Clock, ExternalLink, Filter } from "lucide-react"
+import { MapPin, Search, Navigation, Phone, Clock, ExternalLink, Filter, ArrowLeft } from "lucide-react"
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 import {
   Drawer,
@@ -20,6 +20,7 @@ import {
 import { Checkbox } from "@/components/ui/checkbox"
 import { Label } from "@/components/ui/label"
 import { useMobile } from "@/hooks/use-mobile"
+import { useNavigate } from "react-router-dom"
 
 // Mock data for stores
 const stores = [
@@ -60,6 +61,7 @@ export default function Store() {
   const [selectedStore, setSelectedStore] = useState<number | null>(null)
   const [cityFilters, setCityFilters] = useState<string[]>([])
   const isMobile = useMobile()
+  const navigate = useNavigate()
 
   const handleProductFilterChange = (product: string) => {
     setCityFilters((prev) => (prev.includes(product) ? prev.filter((p) => p !== product) : [...prev, product]))
@@ -73,11 +75,11 @@ export default function Store() {
       store.address.toLowerCase().includes(searchQuery.toLowerCase())
 
     // Filter by products
-    const matchesCity = 
+    const matchesCity =
       cityFilters.length === 0 || cityFilters.some((filter) => store.address.toLowerCase().includes(filter.toLowerCase()))
 
 
-    return matchesSearch  && matchesCity
+    return matchesSearch && matchesCity
   })
 
   // Sort by distance
@@ -131,7 +133,8 @@ export default function Store() {
   )
 
   return (
-    <section className="py-16 md:py-24 flex justify-center items-center">
+    <section className="py-16 md:py-24 flex flex-col justify-center items-center">
+      <ArrowLeft className="ml-2 h-10 fixed top-6 left-6 " onClick={() => navigate('/home')} />
       <div className="container">
         <div className="text-center mb-16">
           <div className="inline-block rounded-full bg-cyan-500/10 px-3 py-1 text-sm font-medium text-cyan-600 mb-4">
